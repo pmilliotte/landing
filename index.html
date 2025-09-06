@@ -95,12 +95,36 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 700;
             color: oklch(0.2 0.2 250);
+            background: linear-gradient(135deg, oklch(0.2 0.2 250), oklch(0.3 0.2 280));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero p {
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: oklch(0.3 0.15 250);
+            position: relative;
+        }
+
+        .hero-subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, oklch(0.2 0.2 250), oklch(0.3 0.2 280));
+            border-radius: 2px;
+        }
+
+        .hero-description {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             max-width: 600px;
@@ -272,7 +296,11 @@
                 font-size: 2.5rem;
             }
 
-            .hero p {
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero-description {
                 font-size: 1.1rem;
             }
 
@@ -313,7 +341,11 @@
                 font-size: 2rem;
             }
 
-            .hero p {
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
                 font-size: 1rem;
             }
 
@@ -389,7 +421,8 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Pro-corrector</h1>
-                <p>Générateur de sujets et assistant de correction pour les enseignants de mathématiques du collège et du lycée</p>
+                <h2 class="hero-subtitle">Correcteur automatique de copies multi-matières</h2>
+                <p class="hero-description">2 clics pour tout corriger ; des heures gagnées.</p>
                 <a href="https://app.pro-corrector.com/signup" class="hero-button">Commencer maintenant</a>
             </div>
         </div>
